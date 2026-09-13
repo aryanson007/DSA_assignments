@@ -14,8 +14,10 @@ void enqueue(int x){
     q[rear]=x;
 }
 void display(){
-    if(front==-1)
+    if(front==-1){
+        cout<<"Queue is empty";
         return;
+    }
     int i=front;
     while(true){
         cout<<q[i]<<" ";
@@ -31,6 +33,10 @@ int main(){
         cin>>x;
         enqueue(x);
     }
+    cout<<"Enter element to insert: ";
+    cin>>x;
+    enqueue(x);
+    cout<<"Queue: ";
     display();
     return 0;
 }
